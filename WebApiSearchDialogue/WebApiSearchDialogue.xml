@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApiSearchDialogue</name>
+    </assembly>
+    <members>
+        <member name="M:WebApiSearchDialogue.AppStart.ConfigureServices.ConfigureServicesSwagger.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            ConfigureServices Swagger services
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:WebApiSearchDialogue.AppStart.ConfigureServices.ConfigureServicesSwagger.SwaggerSettings(Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions)">
+            <summary>
+            properties for swagger UI
+            </summary>
+            <param name="settings"></param>
+        </member>
+    </members>
+</doc>

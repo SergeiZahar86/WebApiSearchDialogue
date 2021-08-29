@@ -16,8 +16,10 @@ namespace WebApiSearchDialogue
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            ConfigureServicesBase.ConfigureServices(services, Configuration);
+            ConfigureServicesControllers.ConfigureServices(services);
             ConfigureServicesSwagger.ConfigureServices(services, Configuration);
+            ConfigureServicesCors.ConfigureServices(services, Configuration);
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

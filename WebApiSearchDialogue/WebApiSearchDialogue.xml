@@ -4,6 +4,41 @@
         <name>WebApiSearchDialogue</name>
     </assembly>
     <members>
+        <member name="T:WebApiSearchDialogue.AppStart.ConfigureServices.ConfigureServicesBase">
+            <summary>
+            ASP.NET Core services registration and configurations
+            </summary>
+        </member>
+        <member name="M:WebApiSearchDialogue.AppStart.ConfigureServices.ConfigureServicesBase.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            ConfigureServices Services
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="T:WebApiSearchDialogue.AppStart.ConfigureServices.ConfigureServicesControllers">
+            <summary>
+            Configure controllers
+            </summary>
+        </member>
+        <member name="M:WebApiSearchDialogue.AppStart.ConfigureServices.ConfigureServicesControllers.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure services
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:WebApiSearchDialogue.AppStart.ConfigureServices.ConfigureServicesCors">
+            <summary>
+            Cors configurations
+            </summary>
+        </member>
+        <member name="M:WebApiSearchDialogue.AppStart.ConfigureServices.ConfigureServicesCors.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Configure Services Cors
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
         <member name="M:WebApiSearchDialogue.AppStart.ConfigureServices.ConfigureServicesSwagger.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
             ConfigureServices Swagger services
@@ -16,6 +51,26 @@
             properties for swagger UI
             </summary>
             <param name="settings"></param>
+        </member>
+        <member name="M:WebApiSearchDialogue.Controllers.RGDialogsClientsController.ListIDRGDialog(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Получение уровня достоверности экстрасенсов 
+            в конце раунда 
+            </summary>
+            <remarks>
+            Sample request:
+            GET / EndRound  
+            Тестовые данные клиентов: 
+            "4b6a6b9a-2303-402a-9970-6e71f4a47151", 
+            "c72e5cb5-d6b4-4c0c-9992-d7ae1c53a820", 
+            "7de3299b-2796-4982-a85b-2d6d1326396e", 
+            "0a58955e-342f-4095-88c6-1109d0f70583",
+            "50454d55-a73c-4cbc-be25-3c5729dcb82b".
+            </remarks>
+            <returns>Returns DataGame</returns>
+            <response code="200">Удачное выполнение запроса</response>
+            <response code="400">Переданное значение не в рамках
+            допустимого диапазона</response>
         </member>
     </members>
 </doc>

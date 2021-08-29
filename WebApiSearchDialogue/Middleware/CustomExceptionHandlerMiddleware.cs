@@ -3,7 +3,6 @@ using System;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net;
-using Application.Common.Exception;
 using FluentValidation;
 using Notes.Application.Common.Exception;
 

@@ -14,9 +14,9 @@ namespace WebApiSearchDialogue.AppStart.Configures
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCustomExceptionHandler();
-            app.UseSwaggerUI(ConfigureServicesSwagger.SwaggerSettings);
             app.UseSwagger();
+            app.UseSwaggerUI(ConfigureServicesSwagger.SwaggerSettings);
+            app.UseCustomExceptionHandler();
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseCors(builder => builder

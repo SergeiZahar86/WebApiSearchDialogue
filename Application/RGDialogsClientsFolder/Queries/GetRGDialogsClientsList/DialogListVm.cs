@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Application.RGDialogsClients.Queries.GetRGDialogsClientsList
+namespace Application.RGDialogsntsFolder.Queries.GetRGDialogsClientsList
 {
     /// <summary>
     /// viewmodel запроса списка диалогов

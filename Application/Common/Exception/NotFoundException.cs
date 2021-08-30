@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Notes.Application.Common.Exception
+namespace Application.Common.Exception
 {
     public class NotFoundException : SystemException
     {

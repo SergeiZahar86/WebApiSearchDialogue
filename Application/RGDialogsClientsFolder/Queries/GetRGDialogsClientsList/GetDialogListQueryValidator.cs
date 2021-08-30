@@ -1,9 +1,4 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.RGDialogsntsFolder.Queries.GetRGDialogsClientsList
 {
@@ -11,8 +6,9 @@ namespace Application.RGDialogsntsFolder.Queries.GetRGDialogsClientsList
     {
         public GetDialogListQueryValidator()
         {
-            //RuleFor(x => x.Clients).NotNull(); 
-            //NotEqual(Guid.Empty);
+            RuleFor(x => x.Clients).Must(list => list.Count > 0)
+                .WithMessage("Переданный список не содержит необходимых элементов, \n" +
+                " ошибка валидации"); ;
         }
     }
 }

@@ -1,12 +1,9 @@
-using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 using WebApiSearchDialogue.AppStart.Configures;
 using WebApiSearchDialogue.AppStart.ConfigureServices;
-using Application;
 using Application.ConfigureServices;
 
 namespace WebApiSearchDialogue
@@ -20,11 +17,6 @@ namespace WebApiSearchDialogue
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-            //ConfigureServicesBase.ConfigureServices(services, Configuration);
-            //services.AddMediatR(Assembly.GetExecutingAssembly());
-
-            //services.AddApplication();
-
             ConfigureServicesMediatR.ConfigureServices(services);
             ConfigureServicesControllers.ConfigureServices(services);
             ConfigureServicesSwagger.ConfigureServices(services, Configuration);

@@ -4,7 +4,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net;
 using FluentValidation;
-using Notes.Application.Common.Exception;
+using Application.Common.Exception;
 
 namespace WebApiSearchDialogue.Middleware
 {
